@@ -5,17 +5,28 @@ import memesData from "./memesData.js";
 
 const Meme= () => {
     
-    const [memeImage, setMemeImage] = useState()
-    
+    const [meme, setMeme] = useState({
+        topText: " ",
+        bottomText: " ",
+        randomImage: "https://i.imhflip.com/30b1gx.jpg"
+    })
+
+    const [allMemeImages, setAllMemeImages] = useState(memesData)
+      
+
 const getMemeImage = () => {
-     const memeArray = memesData.data.memes
+     const memeArray = allMemeImages.data.memes
      const randomNumber = Math.floor(Math.random() * memeArray.length)
-     setMemeImage(memeArray[randomNumber].url) 
+     const url = memeArray[randomNumber].url
+     setMeme(prevMeme => ({
+        ...prevMeme,
+        randomImage: url
+     })) 
 }
 
     return(
         <main>
-            <img src={memeImage} alt="No Meme Avialable" className="meme--image" />
+            <img src={meme.randomImage} alt="No Meme Avialable" className="meme--image" />
             <div className="form">
                 <input type="text" placeholder="Shut up" className="form--inputs" />
                 <input type="text" placeholder="and take my money" className="form--inputs"/>
