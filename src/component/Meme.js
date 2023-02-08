@@ -15,7 +15,7 @@ const getMemeImage = () => {
 
     return(
         <main>
-            <img src={memeImage} alt="No Meme Avialable"/>
+            <img src={memeImage} alt="No Meme Avialable" className="meme--image" />
             <div className="form">
                 <input type="text" placeholder="Shut up" className="form--inputs" />
                 <input type="text" placeholder="and take my money" className="form--inputs"/>
