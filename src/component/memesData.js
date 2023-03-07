@@ -5,7 +5,7 @@ const memesData = {
             {
                 "id": "181913649",
                 "name": "Drake Hotline Bling",
-                "url": "https://i.imhflip.com/30b1gx.jpg",
+                "url": "./images/note.jpg",
                 "width":1200,
                 "height":1200,
                 "box_count": 2
@@ -13,7 +13,7 @@ const memesData = {
             {
                 "id": "87743020",
                 "name": "Tow Buttons",
-                "url": "https://i.imhflip.com/1g8my4.jpg",
+                "url": "./images/todo.jpg",
                 "width":600,
                 "height":108,
                 "box_count": 3
