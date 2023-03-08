@@ -6,7 +6,8 @@ const Massage  = () => {
 
     return(
         <div>
-            {massages.length === 0 ? <h1>You're all caught up!</h1> : <h1>You have {massages.length} unread {massages.length > 1 ? "messages" : "message"}</h1>}
+            {massages.length === 0 ? <h1>You're all caught up!</h1> : <h1>You have {massages.length} unread
+             {massages.length > 1 ? "messages" : "message"}</h1>}
         </div>
     )
 }
