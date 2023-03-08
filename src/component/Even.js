@@ -8,10 +8,11 @@ const Event = () => {
     const addCourt = () => {
         setCount((count) => count + 1)
     }
-       
-    return(
+    
+    return (
         <div>
-           <Count number={count}/>
+            <button onClick={addCourt}>+</button>
+            <Count number={count} />
         </div>
     )
 }

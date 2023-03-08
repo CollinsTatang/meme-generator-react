@@ -1,4 +1,5 @@
 import Header from "./component/Header";
+import Joke from "./component/Joke";
 import Meme from "./component/Meme";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div>
      <Header />
      <Meme />
+     <Joke />
     </div>
   );
 }
