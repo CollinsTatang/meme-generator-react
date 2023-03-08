@@ -3,7 +3,8 @@ import { useState } from "react";
 const Form = () => {
     const [formData, setFormData] = useState({
         firstName: "",
-        lastName: ""
+        lastName: "",
+        Email: ""
     });
 
     function handleChange(event){
@@ -22,12 +23,21 @@ const Form = () => {
                 placeholder="First Name"
                 onChange={handleChange}
                 name="firstName"
+                value={formData.firstName}
             />
             <input
                 type="text"
                 placeholder="Last Name"
                 onChange={handleChange}
                 name="lastName"
+                value={formData.lastName}
+            />
+             <input
+                type="email"
+                placeholder="Last Name"
+                onChange={handleChange}
+                name="Email"
+                value={formData.Email}
             />
         </form>
     )
