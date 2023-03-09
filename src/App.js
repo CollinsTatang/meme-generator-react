@@ -3,6 +3,7 @@ import Header from "./component/Header";
 import Joke from "./component/Joke";
 import Massage from "./component/Massage";
 import Meme from "./component/Meme";
+import Login from "./component/Login";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
      <Joke />
      <Massage />
      <Form />
+     <Login />
     </div>
   );
 }
