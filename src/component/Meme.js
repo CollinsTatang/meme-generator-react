@@ -11,6 +11,22 @@ const Meme= () => {
         randomImage: "./images/note.jpg"
     })
 
+    function handleSubmit(event) {
+        event.preventDefault();
+        console.log(meme)
+
+    }
+
+    function handleChange(event){
+        const {name, value} = event.target
+         setMeme(prevMeme => {
+             return {
+                 ...prevMeme,
+                 [name]: value
+             }
+         })
+     }
+
     const [allMemeImages] = useState(memesData)
       
 //Get a Random image in every new state instance
@@ -28,11 +44,28 @@ const getMemeImage = () => {
     return(
         <main>
             <img src={meme.randomImage} alt="No Meme Avialable" width="400" height="250" className="meme--image" />
-            <div className="form">
-                <input type="text" placeholder="Shut up" className="form--inputs" />
-                <input type="text" placeholder="and take my money" className="form--inputs"/>
+            <h2>{meme.topText}</h2>
+            <h2>{meme.bottomText}</h2>
+            <form onSubmit={handleSubmit} className="form">
+                <input 
+                type="text"
+                name="topText"
+                value={meme.topText}
+                placeholder="Shut up" 
+                className="form--inputs"
+                onChange={handleChange}
+                 />
+                <input 
+                type="text"
+                name="bottomText"
+                value={meme.bottomText}
+                placeholder="and take my money" 
+                className="form--inputs"
+                onChange={handleChange}
+                />
                 <button onClick={getMemeImage} className="form--btn">Get a new meme image  🖼</button>
-            </div>   
+            </form> 
+              
         </main>
     )
 }
