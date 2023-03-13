@@ -4,6 +4,7 @@ import Joke from "./component/Joke";
 import Massage from "./component/Massage";
 import Meme from "./component/Meme";
 import Login from "./component/Login";
+import APIdata from "./component/APIdata";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
      <Massage />
      <Form />
      <Login />
+     <APIdata />
     </div>
   );
 }
