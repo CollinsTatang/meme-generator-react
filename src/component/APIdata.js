@@ -1,10 +1,13 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const APIdata = () => {
     const [StarWarsData, setStarWarsData] = useState({})
-    fetch("https://swapi.dev/api/people/")
-        .then(res => res.json())
-        .then(data => setStarWarsData(data))
+
+        useEffect( () => {
+            fetch("https://swapi.dev/api/people/1")
+                .then(res => res.json())
+                .then(data => setStarWarsData(data))
+        }, [StarWarsData])
 
     return(
         <div>
