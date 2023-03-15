@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./css/Meme.css";
 import memesData from "./memesData.js";
 
@@ -10,6 +10,19 @@ const Meme= () => {
         bottomText: " ",
         randomImage: "./images/note.jpg"
     })
+
+    const [allMemes, setAllMemes] = useState([]);
+
+    useEffect(() => {
+        async function getMemes() {
+            const res = await fetch("https://api.imgflip.com/get_memes/")
+            const data = await res.json()
+            setAllMemes(data)
+        }
+        getMemes()
+    }, [])
+
+    console.log(allMemes)
 
     function handleSubmit(event) {
         event.preventDefault();
