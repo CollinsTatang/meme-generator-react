@@ -5,6 +5,7 @@ import Massage from "./component/Massage";
 import Meme from "./component/Meme";
 import Login from "./component/Login";
 import APIdata from "./component/APIdata";
+import DisplayWindowTracker from "./component/DisplayWindowTracker";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
      <Form />
      <Login />
      <APIdata />
+     <DisplayWindowTracker />
     </div>
   );
 }
