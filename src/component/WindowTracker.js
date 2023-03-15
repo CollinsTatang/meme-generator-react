@@ -6,14 +6,14 @@ const WindowTracker = () => {
 
     useEffect(() => {
         window.addEventListener("resize", function() {
-            setWindowWidth(prevWindowWidth => !prevWindowWidth)
+            setWindowWidth(window.innerWidth)
         } )
-    }, [windowWidth])
+    }, [])
 
     return(
         
         <div>
-           <p>Window width: {windowWidth && window.innerWidth}</p>
+           <p>Window width: {windowWidth}</p>
         </div>
     )
 }
