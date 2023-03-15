@@ -22,12 +22,8 @@ const Meme= () => {
         getMemes()
     }, [])
 
-    console.log(allMemes)
-
     function handleSubmit(event) {
         event.preventDefault();
-        console.log(meme)
-
     }
 
     function handleChange(event){
@@ -43,12 +39,12 @@ const Meme= () => {
     const [allMemeImages] = useState(memesData)
       
 //Get a Random image in every new state instance
-const getMemeImage = () => {
-     const memeArray = allMemeImages.data.memes
-     const randomNumber = Math.floor(Math.random() * memeArray.length)
-     const url = memeArray[randomNumber].url
+    const getMemeImage = () => {
+        const memeArray = allMemeImages.data.memes
+        const randomNumber = Math.floor(Math.random() * memeArray.length)
+        const url = memeArray[randomNumber].url
 
-     setMeme(prevMeme => ({
+        setMeme(prevMeme => ({
         ...prevMeme,
         randomImage: url
      })) 
